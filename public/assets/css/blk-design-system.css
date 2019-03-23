@@ -16808,7 +16808,8 @@ textarea.form-control:active {
 }
 
 .register-page {
-  background-color: #171941;
+  /*background-color: #171941;*/
+  background-color: #483D8B;
 }
 
 .register-page .link {
