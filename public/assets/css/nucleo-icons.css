@@ -23,6 +23,13 @@ Created using IcoMoon - icomoon.io
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'fakeReceipt';
+  src: url('../fonts/fake_receipt.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
 	base class definition
 -------------------------*/
