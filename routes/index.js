@@ -14,4 +14,8 @@ router.get('/adminHome', function(req, res, next) {
     res.render('adminHome');
 });
 
+router.get('/addProduct', function(req, res, next) {
+    res.render('addProduct');
+});
+
 module.exports = router;

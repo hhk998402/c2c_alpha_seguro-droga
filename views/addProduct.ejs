@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <title>
-        HomePage | Seguro Droga
+        Add Product | Seguro Droga
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
@@ -145,64 +145,46 @@
                 <div class="col-md-12 mt-lg-12">
                     <div class="row">
                         <div class="col-md-6 mt-lg-6">
-                            <h1 class="text-white heading-text" style="padding:20px 0 20px 0;">All Products
+                            <h1 class="text-white heading-text" style="padding:20px 0 20px 0;">Add a Product
                                 <!--<span class="text-white">secured</span>-->
                                 <!--<i style="text-align:right;">-->
-                                    <!--<button class="btn btn-success">Add a Product</button>-->
+                                <!--<button class="btn btn-success">Add a Product</button>-->
                                 <!--</i>-->
                             </h1>
                         </div>
-                        <div class="col-md-6 mt-lg-6">
-                            <!--<h1 class="text-white heading-text" style="padding:20px 0 20px 0;">All Products-->
-                                <!--<span class="text-white">secured</span>-->
-                                <i style="text-align:right; float:right; padding:20px;">
-                                    <button onclick='window.open("/addProduct")' class="btn btn-success">Add a Product</button>
-                                </i>
-                            <!--</h1>-->
-                        </div>
                     </div>
 
-                    <table class="table table-hover table-dark" style="color:white">
-                        <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Product ID</th>
-                            <th scope="col">Company ID</th>
-                            <th scope="col">View Product</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <a>
-                                    <i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>
-                                <a>
-                                    <i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <!--<tr>-->
-                            <!--<th scope="row">3</th>-->
-                            <!--<td colspan="2">Larry the Bird</td>-->
-                            <!--<td>@twitter</td>-->
-                        <!--</tr>-->
-                        </tbody>
-                    </table>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Brand Name">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="form-group has-success">
+                                <input type="text" placeholder="Success" class="form-control form-control-success" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="RFID Unique ID" disabled>
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="tim-icons icon-lock-circle"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" style="text-align:center;padding:80px 0 0px 0;">
+            <div class="col-md-12">
+                <button class="btn btn-primary">
+                    Add Product
+                </button>
             </div>
         </div>
     </section>
