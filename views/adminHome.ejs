@@ -34,12 +34,12 @@
             </div>
             <div class="modal-body">
                 <!--<div class="btn-wrapper text-center">-->
-                    <!--<a href="#" class="btn btn-neutral btn-icon">-->
-                        <!--<img src="assets/img/github.svg">-->
-                    <!--</a>-->
-                    <!--<a href="#" class="btn btn-neutral btn-icon">-->
-                        <!--<img src="assets/img/google.svg">-->
-                    <!--</a>-->
+                <!--<a href="#" class="btn btn-neutral btn-icon">-->
+                <!--<img src="assets/img/github.svg">-->
+                <!--</a>-->
+                <!--<a href="#" class="btn btn-neutral btn-icon">-->
+                <!--<img src="assets/img/google.svg">-->
+                <!--</a>-->
                 <!--</div>-->
                 <div class="text-center text-muted mb-4 mt-3">
                     <small>Sign in with credentials</small>
@@ -81,25 +81,14 @@
     </div>
 </div>
 <!--  End Modal -->
-<style>
-    img{
-        margin:-20px 0 20px 0;
-        width: 100px;
-        height:80%;
-        padding: 0 0 0 0;
-        /*max-width: 800px;*/
-    }
-</style>
+
 <body class="landing-page">
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
     <div class="container">
         <div class="navbar-translate">
-            <a class="" href="/" data-placement="bottom" target="_blank">
-                <!--<span>Seguro Droga</span> | Secure Drugs-->
-                <span>
-                    <img src="./assets/img/SeguraDroga.svg" alt="Circle image">
-                </span>
+            <a class="navbar-brand" href="/" rel="tooltip" data-placement="bottom" target="_blank">
+                <span>Seguro Droga</span> | Secure Drugs
             </a>
             <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-bar bar1"></span>
@@ -112,7 +101,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a>
-                            <img src="./assets/img/SeguraDroga.svg" alt="Circle image">
+                            Seguro Droga
                         </a>
                     </div>
                     <div class="col-6 collapse-close text-right">
@@ -124,22 +113,22 @@
             </div>
             <ul class="navbar-nav">
                 <!--<li class="nav-item p-0">-->
-                    <!--<a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">-->
-                        <!--<i class="fab fa-twitter"></i>-->
-                        <!--<p class="d-lg-none d-xl-none">Twitter</p>-->
-                    <!--</a>-->
+                <!--<a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">-->
+                <!--<i class="fab fa-twitter"></i>-->
+                <!--<p class="d-lg-none d-xl-none">Twitter</p>-->
+                <!--</a>-->
                 <!--</li>-->
                 <!--<li class="nav-item p-0">-->
-                    <!--<a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">-->
-                        <!--<i class="fab fa-facebook-square"></i>-->
-                        <!--<p class="d-lg-none d-xl-none">Facebook</p>-->
-                    <!--</a>-->
+                <!--<a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">-->
+                <!--<i class="fab fa-facebook-square"></i>-->
+                <!--<p class="d-lg-none d-xl-none">Facebook</p>-->
+                <!--</a>-->
                 <!--</li>-->
                 <!--<li class="nav-item p-0">-->
-                    <!--<a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">-->
-                        <!--<i class="fab fa-instagram"></i>-->
-                        <!--<p class="d-lg-none d-xl-none">Instagram</p>-->
-                    <!--</a>-->
+                <!--<a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">-->
+                <!--<i class="fab fa-instagram"></i>-->
+                <!--<p class="d-lg-none d-xl-none">Instagram</p>-->
+                <!--</a>-->
                 <!--</li>-->
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="modal" data-target="#myModal2">Sign In</a>
@@ -150,6 +139,72 @@
 </nav>
 <!-- End Navbar -->
 <div class="wrapper">
+    <section class="section section-lg">
+        <div class="container">
+            <div class="row row-grid justify-content-between">
+                <div class="col-md-12 mt-lg-12">
+                    <div class="row">
+                        <div class="col-md-6 mt-lg-6">
+                            <h1 class="text-white heading-text" style="padding:20px 0 20px 0;">All Products
+                                <!--<span class="text-white">secured</span>-->
+                                <!--<i style="text-align:right;">-->
+                                    <!--<button class="btn btn-success">Add a Product</button>-->
+                                <!--</i>-->
+                            </h1>
+                        </div>
+                        <div class="col-md-6 mt-lg-6">
+                            <!--<h1 class="text-white heading-text" style="padding:20px 0 20px 0;">All Products-->
+                                <!--<span class="text-white">secured</span>-->
+                                <i style="text-align:right; float:right; padding:20px;">
+                                    <button onclick='window.open("/addProduct")' class="btn btn-success">Add a Product</button>
+                                </i>
+                            <!--</h1>-->
+                        </div>
+                    </div>
+
+                    <table class="table table-hover table-dark" style="color:white">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Company ID</th>
+                            <th scope="col">View Product</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                                <a>
+                                    <i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>
+                                <a>
+                                    <i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <!--<tr>-->
+                            <!--<th scope="row">3</th>-->
+                            <!--<td colspan="2">Larry the Bird</td>-->
+                            <!--<td>@twitter</td>-->
+                        <!--</tr>-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     <div class="page-header">
         <!--<img src="../assets/img/blob.png" class="path">-->
         <!--<img src="../assets/img/path2.png" class="path2">-->
@@ -164,27 +219,27 @@
                         <!--<span class="text-white">secured</span>-->
                     </h1>
                     <p class="text-white mb-3">
-                        <ul style="font-size:20px;">
+                    <ul style="font-size:20px;">
                         <li><i class="text-success">Block Chain</i> for securely storing data</li>
                         <li><i class="text-success">RFID Tags</i> for uniquely identifying each product</li>
-                        </ul>
+                    </ul>
                     </p>
                     <div class="btn-wrapper mb-3">
                         <!--<p class="category text-success d-inline">From 9.99%/mo</p>-->
                         <!--<a href="#blk" class="btn btn-success btn-link btn-sm"><i class="tim-icons icon-minimal-right"></i></a>-->
                     </div>
                     <!--<div class="btn-wrapper">-->
-                        <!--<div class="button-container">-->
-                            <!--<button href="javascript:void(0)" class="btn btn-icon btn-simple btn-round btn-neutral">-->
-                                <!--<i class="fab fa-twitter"></i>-->
-                            <!--</button>-->
-                            <!--<button href="javascript:void(0)" class="btn btn-icon btn-simple btn-round btn-neutral">-->
-                                <!--<i class="fab fa-dribbble"></i>-->
-                            <!--</button>-->
-                            <!--<button href="javascript:void(0)" class="btn btn-icon btn-simple btn-round btn-neutral">-->
-                                <!--<i class="fab fa-facebook"></i>-->
-                            <!--</button>-->
-                        <!--</div>-->
+                    <!--<div class="button-container">-->
+                    <!--<button href="javascript:void(0)" class="btn btn-icon btn-simple btn-round btn-neutral">-->
+                    <!--<i class="fab fa-twitter"></i>-->
+                    <!--</button>-->
+                    <!--<button href="javascript:void(0)" class="btn btn-icon btn-simple btn-round btn-neutral">-->
+                    <!--<i class="fab fa-dribbble"></i>-->
+                    <!--</button>-->
+                    <!--<button href="javascript:void(0)" class="btn btn-icon btn-simple btn-round btn-neutral">-->
+                    <!--<i class="fab fa-facebook"></i>-->
+                    <!--</button>-->
+                    <!--</div>-->
                     <!--</div>-->
                 </div>
                 <div class="col-lg-4 col-md-5">
@@ -307,14 +362,14 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
-                    <h1 class="text-center heading-text">Our Solution</h1>
+                    <h1 class="text-center">Our Solution</h1>
                     <div class="row row-grid justify-content-center">
                         <div class="col-lg-3">
                             <div class="info">
                                 <div class="icon icon-warning">
                                     <i class="tim-icons icon-rfid"></i>
                                 </div>
-                                <h4 class="info-title heading-text" style="font-size:4vh">RFID Based Tracking</h4>
+                                <h4 class="info-title">RFID Based Tracking</h4>
                                 <hr class="line-warning">
                                 <p>Every Medicine/Drug Packet is given an RFID tag in order to uniquely identify it. Using this RFID
                                     tag, the entire history of the product in the Supply Chain is recorded.
@@ -326,7 +381,7 @@
                                 <div class="icon icon-success">
                                     <i class="tim-icons icon-bitcoin"></i>
                                 </div>
-                                <h4 class="info-title heading-text" style="font-size:4vh">Blockchain for Secure Data Storage</h4>
+                                <h4 class="info-title">Blockchain for Secure Data Storage</h4>
                                 <hr class="line-success" style="background-color: yellow;">
                                 <p>Blockchain is used to ensure Secure and Verifiable Data Storage. The history of the product
                                     throughout the Supply Chain is stored in the Blockchain. Medicine and health-related
@@ -340,7 +395,7 @@
                                 <div class="icon icon-success">
                                     <i class="tim-icons icon-person"></i>
                                 </div>
-                                <h4 class="info-title heading-text" style="font-size:4vh">Drug Counterfeit Check Available to all Customers</h4>
+                                <h4 class="info-title">Drug Counterfeit Check Available to all Customers</h4>
                                 <hr class="line-success" style="background-color: yellow;">
                                 <p>Customers can check the authenticity of the drug that they wish to purchase
                                     by using our application. The customer can request the retailer (chemist, online shop, etc.) to
@@ -354,7 +409,7 @@
                                 <div class="icon icon-primary">
                                     <i class="tim-icons icon-website"></i>
                                 </div>
-                                <h4 class="info-title heading-text" style="font-size:4vh">Web-Based Admin Application</h4>
+                                <h4 class="info-title">Web-Based Admin Application</h4>
                                 <hr class="line-primary" style="background-color: deepskyblue;">
                                 <p>
                                     All admin level actions are handled using an Admin Application. From entering the product details and printing the RFID
@@ -407,7 +462,7 @@
                 <div class="col-md-6">
                     <div class="px-md-5">
                         <hr class="line-success">
-                        <h3 class="heading-text" style="font-size:5vh">Salient Features</h3>
+                        <h3>Salient Features</h3>
                         <p>The application is designed to be simple to use and operate. Customer satisfaction is of the utmost
                             importance, and the application is designed to make people's lives healthier by giving consumers
                             much needed information in order to make informed choices while purchasing medicines.
@@ -450,119 +505,119 @@
         </div>
     </section>
     <!--<section class="section section-lg">-->
-        <!--<img src="../assets/img/path4.png" class="path">-->
-        <!--<img src="../assets/img/path2.png" class="path2">-->
-        <!--<div class="col-md-12">-->
-            <!--<div class="card card-chart card-plain">-->
-                <!--<div class="card-header">-->
-                    <!--<div class="row">-->
-                        <!--<div class="col-sm-6 text-left">-->
-                            <!--<hr class="line-primary">-->
-                            <!--<h5 class="card-category">Total Investments</h5>-->
-                            <!--<h2 class="card-title">Performance</h2>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card-body">-->
-                    <!--<div class="chart-area">-->
-                        <!--<canvas id="chartBig"></canvas>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+    <!--<img src="../assets/img/path4.png" class="path">-->
+    <!--<img src="../assets/img/path2.png" class="path2">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="card card-chart card-plain">-->
+    <!--<div class="card-header">-->
+    <!--<div class="row">-->
+    <!--<div class="col-sm-6 text-left">-->
+    <!--<hr class="line-primary">-->
+    <!--<h5 class="card-category">Total Investments</h5>-->
+    <!--<h2 class="card-title">Performance</h2>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card-body">-->
+    <!--<div class="chart-area">-->
+    <!--<canvas id="chartBig"></canvas>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</section>-->
     <!--<section class="section section-lg section-coins">-->
-        <!--<img src="../assets/img/path3.png" class="path">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-4">-->
-                    <!--<hr class="line-info">-->
-                    <!--<h1>Choose the coin-->
-                        <!--<span class="text-info">that fits your needs</span>-->
-                    <!--</h1>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-4">-->
-                    <!--<div class="card card-coin card-plain">-->
-                        <!--<div class="card-header">-->
-                            <!--<img src="../assets/img/bitcoin.png" class="img-center img-fluid">-->
-                        <!--</div>-->
-                        <!--<div class="card-body">-->
-                            <!--<div class="row">-->
-                                <!--<div class="col-md-12 text-center">-->
-                                    <!--<h4 class="text-uppercase">Light Coin</h4>-->
-                                    <!--<span>Plan</span>-->
-                                    <!--<hr class="line-primary">-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="row">-->
-                                <!--<ul class="list-group">-->
-                                    <!--<li class="list-group-item">50 messages</li>-->
-                                    <!--<li class="list-group-item">100 emails</li>-->
-                                    <!--<li class="list-group-item">24/7 Support</li>-->
-                                <!--</ul>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="card-footer text-center">-->
-                            <!--<button class="btn btn-primary btn-simple">Get plan</button>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-4">-->
-                    <!--<div class="card card-coin card-plain">-->
-                        <!--<div class="card-header">-->
-                            <!--<img src="../assets/img/etherum.png" class="img-center img-fluid">-->
-                        <!--</div>-->
-                        <!--<div class="card-body">-->
-                            <!--<div class="row">-->
-                                <!--<div class="col-md-12 text-center">-->
-                                    <!--<h4 class="text-uppercase">Dark Coin</h4>-->
-                                    <!--<span>Plan</span>-->
-                                    <!--<hr class="line-success">-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="row">-->
-                                <!--<ul class="list-group">-->
-                                    <!--<li class="list-group-item">150 messages</li>-->
-                                    <!--<li class="list-group-item">1000 emails</li>-->
-                                    <!--<li class="list-group-item">24/7 Support</li>-->
-                                <!--</ul>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="card-footer text-center">-->
-                            <!--<button class="btn btn-success btn-simple">Get plan</button>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-4">-->
-                    <!--<div class="card card-coin card-plain">-->
-                        <!--<div class="card-header">-->
-                            <!--<img src="../assets/img/ripp.png" class="img-center img-fluid">-->
-                        <!--</div>-->
-                        <!--<div class="card-body">-->
-                            <!--<div class="row">-->
-                                <!--<div class="col-md-12 text-center">-->
-                                    <!--<h4 class="text-uppercase">Bright Coin</h4>-->
-                                    <!--<span>Plan</span>-->
-                                    <!--<hr class="line-info">-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="row">-->
-                                <!--<ul class="list-group">-->
-                                    <!--<li class="list-group-item">350 messages</li>-->
-                                    <!--<li class="list-group-item">10K emails</li>-->
-                                    <!--<li class="list-group-item">24/7 Support</li>-->
-                                <!--</ul>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="card-footer text-center">-->
-                            <!--<button class="btn btn-info btn-simple">Get plan</button>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+    <!--<img src="../assets/img/path3.png" class="path">-->
+    <!--<div class="container">-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+    <!--<hr class="line-info">-->
+    <!--<h1>Choose the coin-->
+    <!--<span class="text-info">that fits your needs</span>-->
+    <!--</h1>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+    <!--<div class="card card-coin card-plain">-->
+    <!--<div class="card-header">-->
+    <!--<img src="../assets/img/bitcoin.png" class="img-center img-fluid">-->
+    <!--</div>-->
+    <!--<div class="card-body">-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-12 text-center">-->
+    <!--<h4 class="text-uppercase">Light Coin</h4>-->
+    <!--<span>Plan</span>-->
+    <!--<hr class="line-primary">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<ul class="list-group">-->
+    <!--<li class="list-group-item">50 messages</li>-->
+    <!--<li class="list-group-item">100 emails</li>-->
+    <!--<li class="list-group-item">24/7 Support</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card-footer text-center">-->
+    <!--<button class="btn btn-primary btn-simple">Get plan</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+    <!--<div class="card card-coin card-plain">-->
+    <!--<div class="card-header">-->
+    <!--<img src="../assets/img/etherum.png" class="img-center img-fluid">-->
+    <!--</div>-->
+    <!--<div class="card-body">-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-12 text-center">-->
+    <!--<h4 class="text-uppercase">Dark Coin</h4>-->
+    <!--<span>Plan</span>-->
+    <!--<hr class="line-success">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<ul class="list-group">-->
+    <!--<li class="list-group-item">150 messages</li>-->
+    <!--<li class="list-group-item">1000 emails</li>-->
+    <!--<li class="list-group-item">24/7 Support</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card-footer text-center">-->
+    <!--<button class="btn btn-success btn-simple">Get plan</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+    <!--<div class="card card-coin card-plain">-->
+    <!--<div class="card-header">-->
+    <!--<img src="../assets/img/ripp.png" class="img-center img-fluid">-->
+    <!--</div>-->
+    <!--<div class="card-body">-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-12 text-center">-->
+    <!--<h4 class="text-uppercase">Bright Coin</h4>-->
+    <!--<span>Plan</span>-->
+    <!--<hr class="line-info">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<ul class="list-group">-->
+    <!--<li class="list-group-item">350 messages</li>-->
+    <!--<li class="list-group-item">10K emails</li>-->
+    <!--<li class="list-group-item">24/7 Support</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card-footer text-center">-->
+    <!--<button class="btn btn-info btn-simple">Get plan</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</section>-->
     <footer class="footer">
         <div class="container">
@@ -578,19 +633,19 @@
                             </a>
                         </li>
                         <!--<li class="nav-item">-->
-                            <!--<a href="../examples/landing-page.html" class="nav-link">-->
-                                <!--Landing-->
-                            <!--</a>-->
+                        <!--<a href="../examples/landing-page.html" class="nav-link">-->
+                        <!--Landing-->
+                        <!--</a>-->
                         <!--</li>-->
                         <!--<li class="nav-item">-->
-                            <!--<a href="/signup" class="nav-link">-->
-                                <!--Register-->
-                            <!--</a>-->
+                        <!--<a href="/signup" class="nav-link">-->
+                        <!--Register-->
+                        <!--</a>-->
                         <!--</li>-->
                         <!--<li class="nav-item">-->
-                            <!--<a href="../examples/profile-page.html" class="nav-link">-->
-                                <!--Profile-->
-                            <!--</a>-->
+                        <!--<a href="../examples/profile-page.html" class="nav-link">-->
+                        <!--Profile-->
+                        <!--</a>-->
                         <!--</li>-->
                     </ul>
                 </div>
@@ -602,24 +657,24 @@
                             </a>
                         </li>
                         <!--<li class="nav-item">-->
-                            <!--<a href="https://creative-tim.com/contact-us" class="nav-link">-->
-                                <!--Contact Us-->
-                            <!--</a>-->
+                        <!--<a href="https://creative-tim.com/contact-us" class="nav-link">-->
+                        <!--Contact Us-->
+                        <!--</a>-->
                         <!--</li>-->
                         <!--<li class="nav-item">-->
-                            <!--<a href="https://creative-tim.com/about-us" class="nav-link">-->
-                                <!--About Us-->
-                            <!--</a>-->
+                        <!--<a href="https://creative-tim.com/about-us" class="nav-link">-->
+                        <!--About Us-->
+                        <!--</a>-->
                         <!--</li>-->
                         <!--<li class="nav-item">-->
-                            <!--<a href="https://creative-tim.com/blog" class="nav-link">-->
-                                <!--Blog-->
-                            <!--</a>-->
+                        <!--<a href="https://creative-tim.com/blog" class="nav-link">-->
+                        <!--Blog-->
+                        <!--</a>-->
                         <!--</li>-->
                         <!--<li class="nav-item">-->
-                            <!--<a href="https://opensource.org/licenses/MIT" class="nav-link">-->
-                                <!--License-->
-                            <!--</a>-->
+                        <!--<a href="https://opensource.org/licenses/MIT" class="nav-link">-->
+                        <!--License-->
+                        <!--</a>-->
                         <!--</li>-->
                     </ul>
                 </div>
@@ -654,6 +709,11 @@
 <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
 <script src="../assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
 <script>
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+        demo.initLandingPageChart();
+    });
+
     function strip(str) {
         return str.replace(/^\s+|\s+$/g, '');
     }
