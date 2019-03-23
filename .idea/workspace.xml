@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22d2f5e9-581d-4321-bb47-dd1f17192998" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/blk-design-system.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/blk-design-system.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/nucleo-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/nucleo-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/dashboard.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/dashboard.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,23 +28,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/dashboard.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            <state relative-caret-position="103">
+              <caret line="614" column="100" selection-start-line="614" selection-start-column="100" selection-end-line="614" selection-end-column="100" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blk-design-system.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="blk-design-system.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/blk-design-system.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="13636" column="22" lean-forward="true" selection-start-line="13636" selection-start-column="22" selection-end-line="13636" selection-end-column="22" />
+            <state relative-caret-position="105">
+              <caret line="656" column="16" lean-forward="true" selection-start-line="656" selection-start-column="16" selection-end-line="656" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nucleo-icons.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/nucleo-icons.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="546" column="81" selection-start-line="546" selection-start-column="81" selection-end-line="546" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -59,19 +74,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CREATIVE TIM</find>
-      <find>jpg</find>
-      <find>.png</find>
-      <find>background</find>
+      <find>navbar-transpare</find>
+      <find>navbar-expand-lg</find>
+      <find>container</find>
+      <find>.container</find>
+      <find>navbar</find>
+      <find>.navbar</find>
+      <find>#e14eca</find>
+      <find>fixed-top</find>
+      <find>navbar-tran</find>
+      <find>nav</find>
+      <find>card</find>
+      <find>etherum</find>
+      <find>.nabar</find>
+      <find>counter</find>
+      <find>card-title</find>
+      <find>icon-warning</find>
+      <find>icon-big</find>
+      <find>red</find>
+      <find>text-</find>
+      <find>commits</find>
+      <find>icon-trophy</find>
+      <find>ea62</find>
+      <find>content</find>
       <find>text-white</find>
-      <find>mb-3</find>
-      <find>.css</find>
-      <find>text-success</find>
-      <find>BLK</find>
-      <find>modal-</find>
-      <find>modal-black</find>
-      <find>image</find>
-      <find>mymodal2</find>
+      <find>rfid</find>
+      <find>webst</find>
+      <find>line-primary</find>
+      <find>deaths</find>
+      <find>demo-js</find>
+      <find>.row</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,8 +113,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/dashboard.ejs" />
         <option value="$PROJECT_DIR$/public/assets/css/blk-design-system.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/nucleo-icons.css" />
+        <option value="$PROJECT_DIR$/views/dashboard.ejs" />
       </list>
     </option>
   </component>
@@ -148,7 +181,14 @@
               <item name="seguro-droga" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seguro-droga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seguro-droga" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seguro-droga" type="b2602c69:ProjectViewProjectNode" />
@@ -202,12 +242,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553273509924</updated>
-      <workItem from="1553273511771" duration="7763000" />
+      <workItem from="1553273511771" duration="18456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7763000" />
+    <option name="totallyTimeSpent" value="18456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="736" extended-state="6" />
@@ -311,20 +351,51 @@
     <entry file="file://$PROJECT_DIR$/public/assets/img/blob.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/dashboard.ejs">
+    <entry file="file://$PROJECT_DIR$/public/assets/img/etherum.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/plugins/chartjs.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="-914">
           <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/blk-design-system.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/nucleo-icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="546" column="81" selection-start-line="546" selection-start-column="81" selection-end-line="546" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/blk-design-system.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="13636" column="22" lean-forward="true" selection-start-line="13636" selection-start-column="22" selection-end-line="13636" selection-end-column="22" />
+        <state relative-caret-position="105">
+          <caret line="656" column="16" lean-forward="true" selection-start-line="656" selection-start-column="16" selection-end-line="656" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/dashboard.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="614" column="100" selection-start-line="614" selection-start-column="100" selection-end-line="614" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
