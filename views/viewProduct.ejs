@@ -329,7 +329,17 @@
             var counter = 0;
 
             var card = document.createElement("div");
-            card
+            card.setAttribute('class','card bg-danger col-md-3');
+
+            var card_body = document.createElement("div");
+            card_body.setAttribute('class','card-body text-center');
+
+            var card_text = document.createElement("p");
+            card.setAttribute('class','card-text');
+
+            var header = document.createElement("h4");
+            header.setAttribute('style','font-size:4vh;');
+            header.innerHTML()
 
             // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
             var cell1 = row.insertCell(0);
