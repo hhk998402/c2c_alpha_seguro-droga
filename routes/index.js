@@ -37,4 +37,8 @@ router.post('/temp', function(req, res, next) {
     res.send("HERE");
 });
 
+router.get('/logout', function(req,res,next){
+   res.clearCookie('c2c').redirect('/');
+});
+
 module.exports = router;
