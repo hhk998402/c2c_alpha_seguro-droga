@@ -20,8 +20,15 @@
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
+<script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+
+<form id="hiddenForm">
+    <input type="text" name="cmd" value="read" hidden>
+    <input type="text" name="key" value="" hidden>
+</form>
+
 <!-- Form Modal -->
-<div class="modal fade modal-black" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade modal-black" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
@@ -81,6 +88,9 @@
     </div>
 </div>
 <!--  End Modal -->
+<div id="overlay">
+    <div id="loader"></div>
+</div>
 
 <body class="landing-page">
 <!-- Navbar -->
@@ -157,20 +167,30 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-6">
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Brand Name">
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-6">
-                            <div class="form-group has-success">
-                                <input type="text" placeholder="Success" class="form-control form-control-success" />
+                                <!--<div class="input-group-prepend">-->
+                                    <!--<span class="input-group-text"><i class="fa fa-file-prescription"></i></span>-->
+                                <!--</div>-->
+                                <input type="text" class="form-control" placeholder="Name of Product" id="name" name="name">
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-6">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="RFID Unique ID" disabled>
+                                <input type="number" class="form-control" placeholder="Cost" id="cost" name="cost">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Brand Name" id="by" name="by">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <input type="text" id="datepicker" class="form-control datepicker" data-datepicker-color="primary" name="expires">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="RFID Unique ID" id="RFID" name="for" disabled>
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="tim-icons icon-lock-circle"></i></span>
                                 </div>
@@ -182,7 +202,7 @@
         </div>
         <div class="row" style="text-align:center;padding:80px 0 0px 0;">
             <div class="col-md-12">
-                <button class="btn btn-primary">
+                <button class="btn btn-primary" onclick="addProduct();">
                     Add Product
                 </button>
             </div>
@@ -261,7 +281,6 @@
     </footer>
 </div>
 <!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
 <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
 <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
 <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -278,50 +297,51 @@
 <!--<script src="../assets/demo/demo.js"></script>-->
 <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
 <script src="../assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+
 <script>
     $(document).ready(function() {
-        // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-        demo.initLandingPageChart();
+        blackKit.initDatePicker();
+    });
+    // function off() {
+    //     $("#overlay").hide();
+    // }
+    $("#overlay").show();
+    $.ajax({
+        url:'http://c13f0b09.ngrok.io/temp',
+        // url:'/temp',
+        type:'POST',
+        data:$('#hiddenForm').serialize(),
+        success:function(result){
+            alert("Result Obtained from RFID: "+result);
+            $("#overlay").hide();
+            console.log(result.split('~')[0]);
+            document.getElementById("RFID").value = result.split('~')[0];
+            // $("#modalToggle").click();
+            // document.getElementById("modalToggle").click();
+            // $("#response").text(result);
+        }
     });
 
-    function strip(str) {
-        return str.replace(/^\s+|\s+$/g, '');
-    }
-
-    function animateNumber(ele,no,stepTime) {
-        $({someValue: 0}).animate({someValue: no}, {
-            duration: stepTime,
-            step: function () { // called on every step. Update the element's text with value:
-                ele.text(Math.floor(this.someValue + 1));
+    function addProduct(){
+        var data = JSON.stringify({
+            name: document.getElementById("name").value,
+            cost: document.getElementById("cost").value,
+            by:document.getElementById("by").value,
+            for:document.getElementById("RFID").value,
+            expires:document.getElementById("datepicker").value
+        });
+        console.log(data);
+        $.ajax({
+            url: 'http://c2c.rajchandra.me/product/add',
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                console.log(data);
             },
-            complete: function () {
-                if(no>1000000000)
-                    ele.text(no/1000000000 + " Billion");
-                else
-                    ele.text(no);
-            }
+            data: data
         });
     }
-
-
-    //Detecting Scroll to Section
-    var a = 0;
-    $(window).scroll(function() {
-
-        var oTop = $('#counter').offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-            $('.counter-value').each(function() {
-                var $this = $(this),
-                    countTo = $this.attr('data-count');
-                console.log(countTo+"HEMANT");
-                console.log(strip($this.text())+'fhwejffew');
-                // $this.animateNumber({ number: countTo });
-                animateNumber($this,countTo,800);
-            });
-            a = 1;
-        }
-
-    });
 </script>
 </body>
 

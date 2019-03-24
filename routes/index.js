@@ -21,4 +21,13 @@ router.get('/addProduct', function(req, res, next) {
 router.get('/viewProduct', function(req, res, next) {
     res.render('viewProduct');
 });
+
+router.get('/counterfeitCheck', function(req, res, next) {
+    res.render('authCheck');
+});
+
+router.post('/temp', function(req, res, next) {
+    res.send("HERE");
+});
+
 module.exports = router;
