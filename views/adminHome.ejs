@@ -162,51 +162,50 @@
                         </div>
                     </div>
 
-                    <table class="table table-hover table-dark" style="color:white">
+                    <table class="table table-hover table-dark" style="color:white" id="myTable">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Product Name</th>
-                            <th scope="col">Product ID</th>
-                            <th scope="col">Company ID</th>
+                            <th scope="col">Company Name</th>
                             <th scope="col">View Product</th>
                             <th scope="col">Update Product</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <a>
-                                    <i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a>
-                                    <i class="tim-icons icon-send" onmouseover="" style="cursor: pointer; color:salmon"></i>
-                                </a>
-                            </td>
+                            <!--<th scope="row">1</th>-->
+                            <!--<td>Mark</td>-->
+                            <!--<td>Otto</td>-->
+                            <!--<td>@mdo</td>-->
+                            <!--<td>-->
+                                <!--<a>-->
+                                    <!--<i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>-->
+                                <!--</a>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<a>-->
+                                    <!--<i class="tim-icons icon-send" onmouseover="" style="cursor: pointer; color:salmon"></i>-->
+                                <!--</a>-->
+                            <!--</td>-->
 
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>
-                                <a>
-                                    <i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a>
-                                    <i class="tim-icons icon-send" onmouseover="" style="cursor: pointer; color:salmon"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<th scope="row">2</th>-->
+                            <!--<td>Jacob</td>-->
+                            <!--<td>Thornton</td>-->
+                            <!--<td>@fat</td>-->
+                            <!--<td>-->
+                                <!--<a>-->
+                                    <!--<i class="tim-icons icon-settings-gear-63" onmouseover="" style="cursor: pointer; color:deepskyblue"></i>-->
+                                <!--</a>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<a>-->
+                                    <!--<i class="tim-icons icon-send" onmouseover="" style="cursor: pointer; color:salmon"></i>-->
+                                <!--</a>-->
+                            <!--</td>-->
+                        <!--</tr>-->
                         <!--<tr>-->
                             <!--<th scope="row">3</th>-->
                             <!--<td colspan="2">Larry the Bird</td>-->
@@ -317,11 +316,48 @@
 
     $.ajax({
         // url: 'http://c2c.rajchandra.me/product/add',
-        url: 'http://bd2998ad.ngrok.io/products',
-        type: 'post',
-        data:data,
+        url: 'http://bd2998ad.ngrok.io/product/fetch',
+        type: 'get',
         success: function (data) {
+            console.log(data);
+            var i;
+            $.each(data.data.products, function() {
+                // console.log(this.name);
+                // console.log(data.data.products[i].name);
+                // Create an empty <tr> element and add it to the 1st position of the table:
+                var row = table.insertRow(1+counter);
 
+                // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+
+                cell1.innerHTML = counter+1;
+                cell2.innerHTML = this.name;
+                cell3.innerHTML = this.manufactured.by;
+
+                var button = document.createElement("a");
+                var i = document.createElement("i");
+                i.setAttribute('class', 'tim-icons icon-settings-gear-63');
+                i.setAttribute('onmouseover',"''");
+                i.setAttribute('id-target',this.id);
+                i.setAttribute('style','cursor: pointer; color:deepskyblue');
+                button.setAttribute('href','/viewProduct?key1='+this.id);
+                button.appendChild(i);
+                cell4.appendChild(button);
+
+                button = document.createElement("a");
+                i = document.createElement("i");
+                i.setAttribute('class', 'tim-icons icon-send');
+                i.setAttribute('id-target',this.id);
+                i.setAttribute('onmouseover',"''");
+                i.setAttribute('style','cursor: pointer; color:salmon');
+                button.setAttribute('href','/updateProduct?key1='+this.id);
+                button.appendChild(i);
+                cell5.appendChild(button);
+            });
         }
     });
 </script>

@@ -313,8 +313,8 @@
     // }
     $("#overlay").show();
     $.ajax({
-        // url:'http://c13f0b09.ngrok.io/temp',
-        url:'/temp',
+        url:'http://c13f0b09.ngrok.io/temp',
+        // url:'/temp',
         type:'POST',
         data:$('#hiddenForm').serialize(),
         success:function(result){
@@ -336,9 +336,8 @@
             to: document.getElementById("to").value.toString(),
             timestamp: document.getElementById("datepicker").value.toString(),
             rfid: document.getElementById("RFID").value.toString(),
-            key:document.getElementById("key").value.toString()
-            fromID:urlParams.get('key1'),
-            toID:urlParams.get('key2')
+            key:document.getElementById("key").value.toString(),
+            id:urlParams.get('key1')
         };
         console.log(data);
         $.ajax({
