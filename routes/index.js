@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('dashboard');
+    if(!req.cookies.c2c)
+        res.render('dashboard');
+    else
+        res.render('adminHome');
 });
 
 router.get('/signup', function(req, res, next) {
@@ -24,6 +27,10 @@ router.get('/viewProduct', function(req, res, next) {
 
 router.get('/counterfeitCheck', function(req, res, next) {
     res.render('authCheck');
+});
+
+router.get('/updateProduct', function(req, res, next) {
+    res.render('updateProduct');
 });
 
 router.post('/temp', function(req, res, next) {

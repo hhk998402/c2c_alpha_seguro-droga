@@ -323,23 +323,25 @@
     });
 
     function addProduct(){
-        var data = JSON.stringify({
-            name: document.getElementById("name").value,
-            cost: document.getElementById("cost").value,
-            by:document.getElementById("by").value,
-            for:document.getElementById("RFID").value,
-            expires:document.getElementById("datepicker").value
-        });
+        var data = {
+            name: document.getElementById("name").value.toString(),
+            cost: document.getElementById("cost").value.toString(),
+            by: document.getElementById("by").value.toString(),
+            for: document.getElementById("RFID").value.toString(),
+            expires:document.getElementById("datepicker").value.toString()
+        };
         console.log(data);
         $.ajax({
-            url: 'http://c2c.rajchandra.me/product/add',
+            // url: 'http://c2c.rajchandra.me/product/add',
+            url: 'http://bd2998ad.ngrok.io/product/add',
             type: 'post',
-            dataType: 'json',
-            contentType: 'application/json',
+            // dataType: 'json',
+            // contentType: 'application/json',
+            data: data,
             success: function (data) {
                 console.log(data);
-            },
-            data: data
+                alert("Your Product has been successfully added");
+            }
         });
     }
 </script>

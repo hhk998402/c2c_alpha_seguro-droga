@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <title>
-        Counterfeit Check | Seguro Droga
+        Update Product | Seguro Droga
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
@@ -155,7 +155,7 @@
                 <div class="col-md-12 mt-lg-12">
                     <div class="row">
                         <div class="col-md-6 mt-lg-6">
-                            <h1 class="text-white heading-text" style="padding:20px 0 20px 0;">Counterfeit Check
+                            <h1 class="text-white heading-text" style="padding:20px 0 20px 0;">Update Product
                                 <!--<span class="text-white">secured</span>-->
                                 <!--<i style="text-align:right;">-->
                                 <!--<button class="btn btn-success">Add a Product</button>-->
@@ -165,6 +165,32 @@
                     </div>
 
                     <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <!--<div class="input-group-prepend">-->
+                                <!--<span class="input-group-text"><i class="fa fa-file-prescription"></i></span>-->
+                                <!--</div>-->
+                                <input type="text" class="form-control" placeholder="Party A" id="from" name="name">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Party B" id="to" name="cost">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <input type="text" id="datepicker" class="form-control datepicker" data-datepicker-color="primary" name="expires">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="RFID Unique ID" id="RFID" name="for" disabled>
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="tim-icons icon-lock-circle"></i></span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-sm-12 col-lg-12">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Unique Product ID" id="key" disabled>
@@ -173,30 +199,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="RFID Unique ID" id="RFID" disabled>
-                                <div class="input-group-append">
-                                    <span class="input-group-text"><i class="tim-icons icon-lock-circle"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-12 alert alert-success alert-with-icon" id="success" style="margin:20px 0px 20px 0px; display:none;">
-                            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                                <i class="tim-icons icon-simple-remove"></i>
-                            </button>
-                            <span data-notify="icon" class="tim-icons icon-bell-55"></span>
-                            <span>
-                                <b> Genuine Product! - </b> This is an Original Product</span>
-                        </div>
-                        <div class="col-sm-12 col-lg-12 alert alert-danger alert-with-icon" id="danger" style="margin:20px 0px 20px 0px; display:none;">
-                            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                                <i class="tim-icons icon-simple-remove"></i>
-                            </button>
-                            <span data-notify="icon" class="tim-icons icon-support-17"></span>
-                            <span>
-                                <b> Counterfeit! - </b> This product has been flagged as counterfeit. Please contact your healthcare provider for more.</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -204,7 +206,7 @@
         <div class="row" style="text-align:center;padding:80px 0 0px 0;">
             <div class="col-md-12">
                 <button class="btn btn-primary" onclick="addProduct();">
-                    Check Product
+                    Update Product
                 </button>
             </div>
         </div>
@@ -308,18 +310,16 @@
     // }
     $("#overlay").show();
     $.ajax({
-        url:'http://c13f0b09.ngrok.io/temp',
-        // url:'/temp',
+        // url:'http://c13f0b09.ngrok.io/temp',
+        url:'/temp',
         type:'POST',
         data:$('#hiddenForm').serialize(),
         success:function(result){
             alert("Result Obtained from RFID: "+result);
             $("#overlay").hide();
             console.log(result.split('~')[0]);
-            document.getElementById("RFID").value = result.split('~')[0].slice(1,result.split('~')[0].length);
+            document.getElementById("RFID").value = result.split('~')[0];
             document.getElementById("key").value = result.split('~')[1].replace(/ /g, "");
-            // $('#success').show();
-            // $('#danger').show();
             // $("#modalToggle").click();
             // document.getElementById("modalToggle").click();
             // $("#response").text(result);
@@ -328,23 +328,23 @@
 
     function addProduct(){
         var data = {
-            key: document.getElementById("key").value,
-            rfid:document.getElementById("RFID").value
+            from: document.getElementById("from").value.toString(),
+            to: document.getElementById("to").value.toString(),
+            timestamp: document.getElementById("datepicker").value.toString(),
+            rfid: document.getElementById("RFID").value.toString(),
+            key:document.getElementById("key").value.toString()
         };
         console.log(data);
         $.ajax({
-            // url: 'http://c2c.rajchandra.me/poc/validate',
-            url: 'http://bd2998ad.ngrok.io/poc/validate',
+            // url: 'http://c2c.rajchandra.me/product/add',
+            url: 'http://bd2998ad.ngrok.io/product/update',
             type: 'post',
+            // dataType: 'json',
+            // contentType: 'application/json',
             data: data,
             success: function (data) {
                 console.log(data);
-                if(data.code === 0){
-                    $('#success').show();
-                }
-                else{
-                    $('#danger').show();
-                }
+                alert("Your Product has been successfully Updated");
             }
         });
     }

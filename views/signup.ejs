@@ -98,15 +98,15 @@
                                                 <i class="tim-icons icon-single-02"></i>
                                             </div>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Full Name of Company">
+                                        <input type="text" class="form-control" placeholder="Full Name of Company" id="name">
                                     </div>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <i class="tim-icons icon-email-85"></i>
+                                                <i class="tim-icons icon-single-02"></i>
                                             </div>
                                         </div>
-                                        <input type="text" placeholder="Official Email-ID" class="form-control">
+                                        <input type="text" placeholder="User Name (No Spaces, eg: Hemant-Kumar)" class="form-control" id="uname">
                                     </div>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -114,7 +114,7 @@
                                                 <i class="tim-icons icon-lock-circle"></i>
                                             </div>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Password">
+                                        <input type="password" class="form-control" placeholder="Password" id="password">
                                     </div>
                                     <div class="form-check text-left">
                                         <label class="form-check-label">
@@ -127,7 +127,7 @@
                                 </form>
                             </div>
                             <div class="card-footer">
-                                <a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">Get Started</a>
+                                <a href="javascript:void(0)" onclick="signup()" class="btn btn-info btn-round btn-lg">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -233,6 +233,35 @@
 <script src="../assets/demo/demo.js"></script>
 <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
 <script src="../assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+<script>
+    function signup(){
+        var data = {
+            name: document.getElementById("name").value.toString(),
+            uname: document.getElementById("uname").value.toString(),
+            password: document.getElementById("password").value.toString()
+        };
+        console.log(data);
+        $.ajax({
+            // url: 'http://c2c.rajchandra.me/product/add',
+            url: 'http://bd2998ad.ngrok.io/company/register',
+            type: 'post',
+            // dataType: 'json',
+            // contentType: 'application/json',
+            data: data,
+            success: function (data) {
+                console.log(data);
+                if(data.code === 0) {
+                    alert("Signup Completed");
+                    window.location.href('/');
+                }
+                else{
+                    alert("Signup Issue, please check all fields!");
+                }
+            }
+        });
+    }
+</script>
+
 </body>
 
 </html>
