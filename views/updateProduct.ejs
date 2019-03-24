@@ -303,6 +303,9 @@
 
 <script>
     $(document).ready(function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams.get('key1'));
+        console.log(urlParams.get('key2'));
         blackKit.initDatePicker();
     });
     // function off() {
@@ -327,12 +330,15 @@
     });
 
     function addProduct(){
+        var urlParams = new URLSearchParams(window.location.search);
         var data = {
             from: document.getElementById("from").value.toString(),
             to: document.getElementById("to").value.toString(),
             timestamp: document.getElementById("datepicker").value.toString(),
             rfid: document.getElementById("RFID").value.toString(),
             key:document.getElementById("key").value.toString()
+            fromID:urlParams.get('key1'),
+            toID:urlParams.get('key2')
         };
         console.log(data);
         $.ajax({

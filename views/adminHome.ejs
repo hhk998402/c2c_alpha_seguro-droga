@@ -297,48 +297,20 @@
 <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
 <script src="../assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
 <script>
-    $(document).ready(function() {
-        // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-        demo.initLandingPageChart();
-    });
-
-    function strip(str) {
-        return str.replace(/^\s+|\s+$/g, '');
+    var table = document.getElementById("myTable");
+    var counter = 0;
+    data = {
+        name:"Ranbaxy"
     }
 
-    function animateNumber(ele,no,stepTime) {
-        $({someValue: 0}).animate({someValue: no}, {
-            duration: stepTime,
-            step: function () { // called on every step. Update the element's text with value:
-                ele.text(Math.floor(this.someValue + 1));
-            },
-            complete: function () {
-                if(no>1000000000)
-                    ele.text(no/1000000000 + " Billion");
-                else
-                    ele.text(no);
-            }
-        });
-    }
+    $.ajax({
+        // url: 'http://c2c.rajchandra.me/product/add',
+        url: 'http://bd2998ad.ngrok.io/products',
+        type: 'post',
+        data:data,
+        success: function (data) {
 
-
-    //Detecting Scroll to Section
-    var a = 0;
-    $(window).scroll(function() {
-
-        var oTop = $('#counter').offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-            $('.counter-value').each(function() {
-                var $this = $(this),
-                    countTo = $this.attr('data-count');
-                console.log(countTo+"HEMANT");
-                console.log(strip($this.text())+'fhwejffew');
-                // $this.animateNumber({ number: countTo });
-                animateNumber($this,countTo,800);
-            });
-            a = 1;
         }
-
     });
 </script>
 </body>
